@@ -7,28 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
         }
         h1 {
-            font-size: 24px;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
         }
         a {
-            color: blue;
             text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <h1> Bài Tập Về Nhà Buổi 3 </h1>
-    <ul>
-        <li><a href="https://vumaiphuong224001823.github.io/btvn-bai1-buoi2/">Bài 1</a></li>
-        <li><a href="https://vumaiphuong224001823.github.io/btvn-b2-/">Bài 2 (2.1/2.2/2.3)</a></li>
-        <li><a href=" https://vumaiphuong224001823.github.io/btvn-bai3/">Bài 3</a></li>
-    </ul>
-    <h1> Bài Tập Về Nhà Buổi 4</h1>
-        <li><a href="https://vumaiphuong224001823.github.io/bai1.1-btvn-buoi4/">Bài 1.1</a></li>
-        <li><a href="https://vumaiphuong224001823.github.io/bai1.2-btvn-buoi4/">Bài 1.2</a></li>
+    <div class="container">
+        <h1>Bài Tập Về Nhà Buổi 3</h1>
+        <ul>
+            <li><a href="https://vumaiphuong224001823.github.io/btvn-bai1-buoi2/">Bài 1</a></li>
+            <li><a href="https://vumaiphuong224001823.github.io/btvn-b2-/">Bài 2 (2.1/2.2/2.3)</a></li>
+            <li><a href="https://vumaiphuong224001823.github.io/btvn-bai3/">Bài 3</a></li>
+        </ul>
+        
+        <h1>Bài Tập Về Nhà Buổi 4</h1>
+        <ul>
+            <li><a href="https://vumaiphuong224001823.github.io/bai1.1-btvn-buoi4/">Bài 1.1</a></li>
+            <li><a href="https://vumaiphuong224001823.github.io/bai1.2-btvn-buoi4/">Bài 1.2</a></li>
+        </ul>
+        
+        <a href="javascript:history.back()" class="back-button">Quay về</a>
+    </div>
 </body>
 </html>
