@@ -60,11 +60,16 @@
             margin-bottom: 15px;
             width: 80%;
             text-align: center;
+            cursor: pointer;
             transition: transform 0.3s;
         }
 
         .section:hover {
             transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
         }
 
         ul {
@@ -95,39 +100,45 @@
         <a href="#bt5"><i class="fas fa-book"></i> Buổi 5</a>
     </div>
 
-    <div id="bt12" class="section">
+    <div id="bt12" class="section" onclick="toggleVisibility('content12')">
         <h1>Bài Tập Về Nhà Buổi 1 và 2</h1>
-        <ul>
+        <ul id="content12" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/baitapweb/"><i class="fas fa-file-alt"></i> Bài Tập</a></li>
         </ul>
     </div>
 
-    <div id="bt3" class="section">
+    <div id="bt3" class="section" onclick="toggleVisibility('content3')">
         <h1>Bài Tập Về Nhà Buổi 3</h1>
-        <ul>
-            <li><a href="https://vumaiphuong224001823.github.io/btvn-bai1-buoi2/"><i class="fas fa-file-alt"></i> Bài 1</a></li>
+        <ul id="content3" class="hidden">
+            <li><a href="https://vumaiphuong224001823.github.io/btvn-bai1-buoi2/">Bài 1</a></li>
             <li><a href="https://vumaiphuong224001823.github.io/btvn-b2-/">Bài 2 (2.1/2.2/2.3)</a></li>
             <li><a href="https://vumaiphuong224001823.github.io/btvn-bai3/">Bài 3</a></li>
         </ul>
     </div>
 
-    <div id="bt4" class="section">
+    <div id="bt4" class="section" onclick="toggleVisibility('content4')">
         <h1>Bài Tập Về Nhà Buổi 4</h1>
-        <ul>
+        <ul id="content4" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/bai1.1-btvn-buoi4/">Bài 1.1</a></li>
             <li><a href="https://vumaiphuong224001823.github.io/bai1.2-btvn-buoi4/">Bài 1.2</a></li>
-            <li><a href="https://vumaiphuong224001823.github.io/b2-btvn-buoi4/">Bài 2</a></li>
-            <li><a href="https://vumaiphuong224001823.github.io/b3-btvn-buoi4/">Bài 3</a></li>
-            <li><a href="https://vumaiphuong224001823.github.io/trang-ca-nhan/">Bài 4</a></li>
         </ul>
     </div>
 
-    <div id="bt5" class="section">
+    <div id="bt5" class="section" onclick="toggleVisibility('content5')">
         <h1>Bài Tập Về Nhà Buổi 5</h1>
-        <ul>
+        <ul id="content5" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/b1-buoi5/">Bài 1</a></li>
-            <li><a href="https://vumaiphuong224001823.github.io/trang-ca-nhan/">Bài 2</a></li>
         </ul>
     </div>
+
+    <script>
+        function toggleVisibility(id) {
+            const sections = document.querySelectorAll('.section ul');
+            sections.forEach(section => {
+                if (section.id !== id) section.classList.add('hidden');
+            });
+            document.getElementById(id).classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
