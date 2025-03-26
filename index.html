@@ -143,7 +143,7 @@
         <div class="welcome-text">Chào mừng đến với trang Web của Mai Phương</div>
     </div>
 </body>
-    <div id="bt12" class="section" onclick="toggleVisibility('content12')">
+    <div id="bt12" class="clicked" onclick="toggleVisibility('content12')">
         <h1>Bài Tập Buổi 1 và 2</h1>
         <ul id="content12" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/baitapweb/"><i class="fas fa-file-alt"></i> Bài Tập</a></li>
@@ -151,7 +151,7 @@
         </ul>
     </div>
 
-    <div id="bt3" class="section" onclick="toggleVisibility('content3')">
+    <div id="bt3" class="clicked" onclick="toggleVisibility('content3')">
         <h1>Bài Tập Buổi 3</h1>
         <ul id="content3" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/btvn-bai1-buoi2/">Bài 1</a></li>
@@ -161,7 +161,7 @@
         </ul>
     </div>
 
-    <div id="bt4" class="section" onclick="toggleVisibility('content4')">
+    <div id="bt4" class="clicked" onclick="toggleVisibility('content4')">
         <h1>Bài Tập Buổi 4</h1>
         <ul id="content4" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/bai1.1-btvn-buoi4/">Bài 1.1</a></li>
@@ -170,7 +170,7 @@
         </ul>
     </div>
 
-    <div id="bt5" class="section" onclick="toggleVisibility('content5')">
+    <div id="bt5" class="clicked" onclick="toggleVisibility('content5')">
         <h1>Bài Tập Buổi 5</h1>
         <ul id="content5" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/b1-buoi5/">Bài 1</a></li>
@@ -178,7 +178,7 @@
         </ul>
     </div>
 
-    <div id="bt6" class="section" onclick="toggleVisibility('content6')">
+    <div id="bt6" class="clicked" onclick="toggleVisibility('content6')">
         <h1>Bài Tập Buổi 6</h1>
         <ul id="content6" class="hidden">
             <li><a href="https://vumaiphuong224001823.github.io/btlop-float/">Bài 1 float</a></li>
@@ -193,9 +193,9 @@
 
     <script>
         function toggleVisibility(id) {
-            const sections = document.querySelectorAll('.section ul');
-            sections.forEach(section => {
-                if (section.id !== id) section.classList.add('hidden');
+            const clicked = document.querySelectorAll('.clicked ul');
+            clicked.forEach(clicked => {
+                if (clicked.id !== id) clicked.classList.add('hidden');
             });
             document.getElementById(id).classList.toggle('hidden');
         }
