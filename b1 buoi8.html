@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập kiểm tra số chẵn hay lẻ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    #ketQua {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bài tập: Kiểm tra số chẵn hay lẻ</h1>
+  <p>Nhập một số bất kỳ vào ô dưới đây, sau đó nhấn "Kiểm tra":</p>
+
+  <input type="number" id="soNhap" placeholder="Nhập số">
+  <button onclick="kiemTraChanLe()">Kiểm tra</button>
+
+  <p id="ketQua"></p>
+
+  <script>
+    function kiemTraChanLe() {
+    
+      const so = document.getElementById('soNhap').value;
+      const ketQua = document.getElementById('ketQua');
+
+      if (so === "") {
+        ketQua.textContent = "Vui lòng nhập một số để kiểm tra.";
+        ketQua.style.color = "red";
+        return;
+      }
+
+      const soNguyen = parseInt(so);
+
+      if (soNguyen % 2 === 0) {
+        ketQua.textContent = soNguyen + " là số chẵn.";
+        ketQua.style.color = "green";
+      } else {
+        ketQua.textContent = soNguyen + " là số lẻ.";
+        ketQua.style.color = "blue";
+      }
+    }
+  </script>
+</body>
+</html>
