@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đổi màu bằng JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #text {
+      font-size: 24px;
+      margin-bottom: 20px;
+      transition: background-color 0.4s ease;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="text">đổi màu tôi đi</div>
+    <button onclick="changeColor()">xanh</button>
+  </div>
+
+  <script>
+    function changeColor() {
+      document.getElementById("text").style.backgroundColor = "lightblue";
+    }
+  </script>
+</body>
+</html>

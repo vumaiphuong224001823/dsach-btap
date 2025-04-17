@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thực hiện phép tính và đổi màu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .operation {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+    }
+
+    input[type="number"], input[type="text"] {
+      width: 60px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .result-log {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+
+    .log-item {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 5px;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>6.2 Thực hiện phép tính và đổi màu phép tính vừa thực hiện</h2>
+
+    <div class="operation">
+      <label>Phép cộng</label>
+      <input type="number" id="add1" value="3"> +
+      <input type="number" id="add2" value="3"> =
+      <input type="text" id="addResult" readonly>
+      <button onclick="calculate('add')">Tính</button>
+    </div>
+
+    <div class="operation">
+      <label>Phép trừ</label>
+      <input type="number" id="sub1" value="3"> -
+      <input type="number" id="sub2" value="3"> =
+      <input type="text" id="subResult" readonly>
+      <button onclick="calculate('sub')">Tính</button>
+    </div>
+
+    <div class="operation">
+      <label>Phép nhân</label>
+      <input type="number" id="mul1" value="2"> ×
+      <input type="number" id="mul2" value="2"> =
+      <input type="text" id="mulResult" readonly>
+      <button onclick="calculate('mul')">Tính</button>
+    </div>
+
+    <div class="operation">
+      <label>Phép chia</label>
+      <input type="number" id="div1" value="3"> ÷
+      <input type="number" id="div2" value="3"> =
+      <input type="text" id="divResult" readonly>
+      <button onclick="calculate('div')">Tính</button>
+    </div>
+
+    <h3 style="margin-top: 30px;">Các phép toán vừa thực hiện</h3>
+    <div id="log" class="result-log"></div>
+  </div>
+
+  <script>
+    let log = document.getElementById("log");
+
+    function resetHighlight() {
+      const items = document.querySelectorAll('.log-item');
+      items.forEach(item => item.classList.remove('highlight'));
+    }
+
+    function calculate(type) {
+      let a, b, result, symbol, label;
+
+      switch (type) {
+        case 'add':
+          a = +document.getElementById("add1").value;
+          b = +document.getElementById("add2").value;
+          result = a + b;
+          document.getElementById("addResult").value = result;
+          symbol = "+";
+          label = "PHÉP CỘNG";
+          break;
+
+        case 'sub':
+          a = +document.getElementById("sub1").value;
+          b = +document.getElementById("sub2").value;
+          result = a - b;
+          document.getElementById("subResult").value = result;
+          symbol = "-";
+          label = "PHÉP TRỪ";
+          break;
+
+        case 'mul':
+          a = +document.getElementById("mul1").value;
+          b = +document.getElementById("mul2").value;
+          result = a * b;
+          document.getElementById("mulResult").value = result;
+          symbol = "×";
+          label = "PHÉP NHÂN";
+          break;
+
+        case 'div':
+          a = +document.getElementById("div1").value;
+          b = +document.getElementById("div2").value;
+          result = b !== 0 ? (a / b).toFixed(2) : "NaN";
+          document.getElementById("divResult").value = result;
+          symbol = "÷";
+          label = "PHÉP CHIA";
+          break;
+      }
+
+      resetHighlight(); // bỏ highlight cũ
+
+      // thêm phép toán mới vào log
+      const entry = document.createElement("div");
+      entry.className = "log-item highlight";
+      entry.innerHTML = `<strong>${label}</strong><br>${a}${symbol}${b}=${result}`;
+      log.appendChild(entry);
+    }
+  </script>
+</body>
+</html>

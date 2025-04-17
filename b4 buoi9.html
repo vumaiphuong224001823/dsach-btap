@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Đăng Ký</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border: 2px solid #8e44ad;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #8e44ad;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender-options,
+    .hobby-options {
+      margin-top: 5px;
+    }
+
+    .gender-options input,
+    .hobby-options input {
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 20px;
+      margin: 5px;
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #732d91;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>FORM ĐĂNG KÝ</h2>
+    <form id="registerForm" onsubmit="return validateForm()">
+      <label>Họ
+        <input type="text" id="lastName" name="lastName">
+      </label>
+
+      <label>Tên
+        <input type="text" id="firstName" name="firstName">
+      </label>
+
+      <label>Ngày sinh:</label>
+      <div style="display: flex; gap: 10px;">
+        <select name="day">
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+        <select name="month">
+          <script>
+            for (let i = 1; i <= 12; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+        <select name="year">
+          <script>
+            for (let i = 1980; i <= 2024; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+      </div>
+
+      <label>Giới tính:</label>
+      <div class="gender-options">
+        <input type="radio" name="gender" value="Nam" checked> Nam
+        <input type="radio" name="gender" value="Nữ"> Nữ
+      </div>
+
+      <label>Số điện thoại
+        <input type="text" id="phone" name="phone">
+      </label>
+
+      <label>Sở thích:</label>
+      <div class="hobby-options">
+        <input type="checkbox" name="hobby" value="doc_sach" checked> Đọc sách
+        <input type="checkbox" name="hobby" value="xem_phim"> Xem phim
+        <input type="checkbox" name="hobby" value="nghe_nhac"> Nghe nhạc
+        <input type="checkbox" name="hobby" value="da_bong"> Đá bóng
+      </div>
+
+      <label>Khác:
+        <textarea name="other" rows="2" placeholder="Ghi thêm nếu có..."></textarea>
+      </label>
+
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      const ho = document.getElementById("lastName").value.trim();
+      const ten = document.getElementById("firstName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if (ho === "" || ten === "" || phone === "") {
+        alert("Vui lòng nhập đầy đủ họ, tên và số điện thoại.");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Số điện thoại phải là số và gồm đúng 10 chữ số.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
