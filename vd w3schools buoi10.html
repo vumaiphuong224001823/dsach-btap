@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin Công Nghệ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    #navbar {
+      background-color: #1e1e2f;
+      padding: 60px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      transition: all 0.4s ease;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbar a {
+      float: left;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    #navbar a:hover {
+      background-color: #33334d;
+      border-radius: 4px;
+    }
+
+    #logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffff;
+      float: left;
+      margin-right: 20px;
+      transition: font-size 0.3s ease;
+    }
+
+    #navbar-right {
+      float: right;
+    }
+
+    .content {
+      padding: 140px 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #1a73e8;
+    }
+
+    article {
+      margin-top: 40px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    @media screen and (max-width: 600px) {
+      #navbar a, #navbar-right {
+        float: none;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <div id="logo">TechNews</div>
+  <div id="navbar-right">
+    <a href="#trending">Xu hướng</a>
+    <a href="#reviews">Đánh giá</a>
+    <a href="#ai">Trí tuệ nhân tạo</a>
+    <a href="#contact">Liên hệ</a>
+  </div>
+</div>
+
+<div class="content">
+  <h1>Tin tức công nghệ nổi bật hôm nay</h1>
+  <article>
+    <h2>🚀 Apple chính thức ra mắt iPhone 15 Ultra</h2>
+    <p>Phiên bản mới nhất của dòng iPhone vừa được giới thiệu với camera AI, màn hình không viền hoàn toàn và chip A18 Bionic siêu mạnh mẽ.</p>
+  </article>
+
+  <article>
+    <h2>🤖 Google phát triển Bard AI thế hệ mới</h2>
+    <p>Bard AI 2.0 có khả năng hiểu ngữ cảnh tốt hơn, tạo ra văn bản tự nhiên và tương tác như con người.</p>
+  </article>
+
+  <article>
+    <h2>🌐 Microsoft tích hợp ChatGPT vào toàn bộ Office 365</h2>
+    <p>Word, Excel, và PowerPoint nay có thể hỗ trợ người dùng tạo nội dung, bảng tính, và thuyết trình một cách thông minh.</p>
+  </article>
+</div>
+
+<script>
+window.onscroll = function() {shrinkNavbar()};
+
+function shrinkNavbar() {
+  const nav = document.getElementById("navbar");
+  const logo = document.getElementById("logo");
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    nav.style.padding = "20px 15px";
+    logo.style.fontSize = "22px";
+  } else {
+    nav.style.padding = "60px 20px";
+    logo.style.fontSize = "28px";
+  }
+}
+</script>
+
+</body>
+</html>

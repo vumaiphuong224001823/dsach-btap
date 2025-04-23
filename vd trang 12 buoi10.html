@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông Tin Sản Phẩm</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .product-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      transition: 0.3s ease;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: 0.4s ease;
+    }
+
+    .product-card h2 {
+      font-size: 26px;
+      margin: 0 0 15px;
+      color: #2c3e50;
+      transition: 0.3s ease;
+    }
+
+    .product-card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <img id="productImage" src="anhtainghe.webp" alt="Ảnh tai nghe">
+    <h2 id="productTitle">Tai nghe Bluetooth Pro 2022</h2>
+    <p id="description">Sản phẩm tai nghe với thiết kế hiện đại, chất lượng âm thanh vượt trội.</p>
+    <button class="btn" onclick="changeProduct()">Xem sản phẩm khác</button>
+  </div>
+
+  <script>
+    function changeProduct() {
+      document.getElementById("productTitle").innerHTML = "Loa thông minh Echo Studio";
+      document.getElementById("productImage").src = "loathongminh.webp";
+      document.getElementById("description").innerHTML = "Loa thông minh hỗ trợ Alexa, âm thanh 3D chân thực, kết nối dễ dàng.";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm ảnh hoa</title>
+</head>
+<body>
+
+  <div id="bo">
+     <!-- Ảnh sẽ được thêm vào đây -->
+  </div>
+
+  <button onclick="addnode_img()">Thêm ảnh hoa</button>
+
+  <script>
+    function addnode_img() {
+      var pt = document.createElement('img');
+      pt.src = "anhhoa1.jpg"; // Đường dẫn đến ảnh hoa (cùng thư mục)
+      pt.alt = "Ảnh hoa đẹp";
+      pt.width = 300;
+      document.getElementById("bo").appendChild(pt);
+    }
+  </script>
+
+</body>
+</html>

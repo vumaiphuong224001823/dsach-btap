@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thay đổi nội dung và giao diện</title>
+<style>
+  #container {
+    background-color: #f0f0f0; /* Màu nền nhạt */
+    padding: 20px; /* Khoảng cách lề bên trong */
+    border: 1px solid #ccc; /* Đường viền mỏng */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  #heading1 {
+    color: blue; /* Màu chữ xanh */
+    font-size: 24px; /* Kích thước chữ lớn hơn */
+    font-weight: bold; /* Chữ đậm */
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+  }
+
+  #newContent {
+    color: green; /* Màu chữ xanh lá cây */
+    font-style: italic; /* Chữ nghiêng */
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <h1 id="heading1">Xin chào CNTT 2021</h1>
+</div>
+
+<script>
+  var headingElement = document.getElementById("heading1");
+  var oldContent = headingElement.innerHTML;
+
+  document.write("Giá trị h1 cũ là: " + oldContent + "<br>");
+
+  var newContentElement = document.createElement("span");
+  newContentElement.id = "newContent";
+  newContentElement.textContent = "Học tập hiệu quả và sáng tạo!";
+
+  headingElement.innerHTML = ""; // Xóa nội dung cũ
+  headingElement.appendChild(newContentElement); // Thêm phần tử mới vào
+
+ 
+</script>
+
+</body>
+</html>

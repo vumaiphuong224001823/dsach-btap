@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt Hàng</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    #orderBtn {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #orderBtn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Nhấn vào nút bên dưới để đặt hàng</h2>
+  <button id="orderBtn">🛒 Đặt hàng ngay</button>
+
+  <script>
+    const orderBtn = document.getElementById("orderBtn");
+
+    orderBtn.addEventListener("click", showThankYou);
+    orderBtn.addEventListener("click", sendConfirmation);
+
+    function showThankYou() {
+      alert("🎉 Cảm ơn bạn đã đặt hàng!");
+    }
+
+    function sendConfirmation() {
+      alert("📧 Email xác nhận đã được gửi đến bạn.");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kỹ Năng Công Việc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #34495e;
+    }
+
+    #output {
+      margin-top: 30px;
+      padding: 15px 20px;
+      background-color: #eaf2f8;
+      border-left: 5px solid #2980b9;
+      font-weight: bold;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Những kỹ năng cần thiết cho công việc</h2>
+
+  <p>Kỹ năng mềm là rất quan trọng.</p>
+  <p class="skill">Giao tiếp hiệu quả</p>
+  <p class="skill">Quản lý thời gian</p>
+  <p class="skill">Làm việc nhóm</p>
+
+  <div id="output"></div>
+
+  <script>
+    var x = document.getElementsByClassName("skill");
+    document.getElementById("output").innerHTML =
+      '👉 Kỹ năng đầu tiên trong danh sách là: ' + x[0].innerHTML;
+  </script>
+
+</body>
+</html>

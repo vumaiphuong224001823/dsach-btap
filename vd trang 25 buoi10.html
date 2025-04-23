@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá Việt Nam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding-top: 110px; /* Khoảng trống ban đầu cho header và menu cố định */
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            transition: padding-top 0.3s ease;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 100;
+            transition: padding 0.3s ease, font-size 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px; /* Giảm khoảng cách dưới tiêu đề */
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.8;
+            margin-bottom: 10px; /* Thêm khoảng cách dưới mô tả */
+        }
+
+        nav.menu {
+            position: fixed; /* Cố định menu dưới header */
+            top: 60px; /* Đặt vị trí ngay dưới header (40px padding + 20px h1 margin + 0px p margin) */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 99; /* Đảm bảo dưới header nhưng trên nội dung */
+            transition: padding 0.3s ease, top 0.3s ease; /* Thêm transition cho top */
+        }
+
+        nav.menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: font-size 0.3s ease;
+        }
+
+        nav.menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+        }
+
+        header.scrolled h1 {
+            font-size: 2em;
+            margin-bottom: 2px;
+        }
+
+        header.scrolled p {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        nav.menu.scrolled {
+            padding: 5px 0;
+            top: 40px; /* Điều chỉnh vị trí menu khi header thu nhỏ (20px padding) */
+        }
+
+        nav.menu.scrolled a {
+            font-size: 1.5em;
+            padding: 5px 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 30px; /* Khoảng cách từ menu đến nội dung */
+        }
+
+        .section-title {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+        }
+
+        .image-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <h1>Chào mừng đến với Việt Nam</h1>
+        <p>Khám phá vẻ đẹp và văn hóa đa dạng của đất nước chúng tôi.</p>
+    </header>
+
+    <nav class="menu" id="mainMenu">
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#vanhoa">Văn hóa</a>
+        <a href="#amthuc">Ẩm thực</a>
+        <a href="#diadiem">Địa điểm nổi tiếng</a>
+        <a href="#lienhe">Liên hệ</a>
+    </nav>
+
+    <div class="container">
+        <section id="gioithieu" class="content-section">
+            <h2 class="section-title">Giới thiệu về Việt Nam</h2>
+            <p>Việt Nam là một quốc gia xinh đẹp nằm ở Đông Nam Á, nổi tiếng với lịch sử lâu đời, văn hóa phong phú và cảnh quan thiên nhiên tuyệt vời. Từ những dãy núi hùng vĩ ở phía Bắc đến những đồng bằng màu mỡ ở phía Nam, Việt Nam mang đến một sự đa dạng đáng kinh ngạc cho du khách khám phá.</p>
+            <p>Với con người thân thiện, ẩm thực đặc sắc và những di sản văn hóa được UNESCO công nhận, Việt Nam chắc chắn sẽ là một điểm đến khó quên trong hành trình của bạn.</p>
+        </section>
+
+        <section id="vanhoa" class="content-section">
+            <h2 class="section-title">Văn hóa đa dạng</h2>
+            <p>Văn hóa Việt Nam là sự pha trộn độc đáo giữa các yếu tố truyền thống và hiện đại, chịu ảnh hưởng sâu sắc từ lịch sử và các nền văn minh láng giềng. Các lễ hội truyền thống, trang phục áo dài duyên dáng, nghệ thuật múa rối nước độc đáo và âm nhạc dân gian đặc sắc là những nét văn hóa tiêu biểu của Việt Nam.</p>
+            <ul>
+                <li>**Lễ hội:** Tết Nguyên Đán, Lễ hội Đền Hùng, Lễ hội Áo dài...</li>
+                <li>**Nghệ thuật:** Múa rối nước, Ca trù, Nhã nhạc cung đình Huế...</li>
+                <li>**Kiến trúc:** Chùa Một Cột, Khuê Văn Các, Phố cổ Hội An...</li>
+            </ul>
+        </section>
+
+        <section id="amthuc" class="content-section">
+            <h2 class="section-title">Ẩm thực hấp dẫn</h2>
+            <p>Ẩm thực Việt Nam nổi tiếng trên toàn thế giới với sự tươi ngon, hương vị tinh tế và sự đa dạng trong cách chế biến. Từ món phở trứ danh, bánh mì giòn rụm đến nem rán thơm lừng và gỏi cuốn thanh mát, mỗi món ăn đều mang trong mình một câu chuyện văn hóa riêng.</p>
+            <p>Khám phá các khu chợ địa phương và thưởng thức những món ăn đường phố sẽ là một trải nghiệm thú vị không thể bỏ qua khi đến Việt Nam.</p>
+            
+        </section>
+
+        <section id="diadiem" class="content-section">
+            <h2 class="section-title">Những địa điểm nổi tiếng</h2>
+            <p>Việt Nam sở hữu vô số cảnh quan thiên nhiên tuyệt đẹp và các di tích lịch sử hấp dẫn:</p>
+            <ul>
+                <li>**Vịnh Hạ Long:** Kỳ quan thiên nhiên thế giới với hàng ngàn đảo đá vôi kỳ vĩ.</li>
+                <li>**Hội An:** Phố cổ duyên dáng với những con phố đèn lồng rực rỡ.</li>
+                <li>**Huế:** Kinh đô cổ kính với những lăng tẩm uy nghiêm và sông Hương thơ mộng.</li>
+                <li>**Sapa:** Vùng núi Tây Bắc với những thửa ruộng bậc thang hùng vĩ và văn hóa dân tộc độc đáo.</li>
+                <li>**Đồng bằng sông Cửu Long:** Vựa lúa của cả nước với những chợ nổi sôi động và miệt vườn trĩu quả.</li>
+            </ul>
+        </section>
+
+        <section id="lienhe" class="content-section">
+            <h2 class="section-title">Liên hệ</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi hoặc muốn biết thêm thông tin về Việt Nam, đừng ngần ngại liên hệ với chúng tôi:</p>
+            <p>Email: info.vietnam@example.com</p>
+            <p>Điện thoại: (+84) 123 456 789</p>
+            <p>Địa chỉ: 123 Đường ABC, Hà Nội, Việt Nam</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Khám phá Việt Nam. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        const header = document.getElementById('mainHeader');
+        const menu = document.getElementById('mainMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                menu.classList.add('scrolled');
+                document.body.style.paddingTop = (header.offsetHeight + menu.offsetHeight) + 'px';
+            } else {
+                header.classList.remove('scrolled');
+                menu.classList.remove('scrolled');
+                document.body.style.paddingTop = '110px';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thay đổi nội dung và giao diện</title>
+<style>
+  .font_chu {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  }
+
+  .mau_chu {
+    color: green;
+  }
+
+  .co_chu {
+    font-size: 13px;
+  }
+
+  /* Thêm một chút kiểu dáng cơ bản cho body để dễ nhìn */
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="font_chu" id="td1">Chào Mừng Đến Với Trang Web Này </h1>
+<button onclick="tonho()">try it</button>
+
+<script>
+  var pt = document.getElementById("td1");
+
+  function tonho() {
+    pt.classList.toggle("mau_chu");
+    pt.classList.toggle("co_chu");
+  }
+</script>
+
+</body>
+</html>

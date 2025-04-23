@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm lời chào</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #container {
+      background-color: #f0f8ff;
+      padding: 15px;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      max-width: 500px;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <p id="p1">Xin chào bạn đến với trang web!</p>
+    <p id="p2">Hãy khám phá thêm các nội dung hấp dẫn bên dưới.</p>
+  </div>
+
+  <button onclick="addnode()">Thêm lời chào mới</button>
+
+  <script>
+    function addnode() {
+      var x = document.createElement('p');
+      x.className = "p3";
+      x.innerText = "🌟 Chúc bạn một ngày tuyệt vời!";
+      var cha = document.getElementById('container');
+      var y = document.getElementById("p2");
+      cha.insertBefore(x, y);
+    }
+  </script>
+
+</body>
+</html>

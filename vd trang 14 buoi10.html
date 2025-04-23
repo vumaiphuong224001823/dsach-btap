@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm Nội Dung Mới</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef1f5;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      text-align: center;
+    }
+
+    .container p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <p>Thông điệp đầu tiên: Chào mừng bạn đến với thế giới JavaScript!</p>
+    <button class="btn" onclick="addNewHeading()">Thêm tiêu đề mới</button>
+  </div>
+
+  <script>
+    function addNewHeading() {
+      var newHeading = document.createElement('h1');
+      newHeading.innerHTML = "🎉 JavaScript đã thêm nội dung mới!";
+      var container = document.getElementById('container');
+      container.appendChild(newHeading);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Món Ăn Yêu Thích</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      color: #34495e;
+      margin: 10px 0;
+    }
+
+    #output {
+      background-color: #ecf0f1;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-weight: bold;
+      color: #2980b9;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Danh sách món ăn yêu thích</h2>
+
+  <p>Bún bò Huế</p>
+  <p>Phở Hà Nội</p>
+  <p>Cơm tấm Sài Gòn</p>
+
+  <p id="output"></p>
+
+  <script>
+    var monAn = document.getElementsByTagName("p");
+    document.getElementById("output").innerHTML =
+      "👉 Món ăn thứ hai trong danh sách là: " + monAn[1].innerHTML;
+  </script>
+
+</body>
+</html>
